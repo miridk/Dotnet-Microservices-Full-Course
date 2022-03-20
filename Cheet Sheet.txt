@@ -1,0 +1,18 @@
+
+##KUBERNETES COMMANDS##
+kubectl apply -f mssql-plat-depl.yaml
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55w0rd!"
+kubectl get 
+	- pods
+	- namespaces
+	- services
+	- deployments
+Getting pods from the namespace ingress-nginx
+kubectl get pods --namespace=ingress-nginx
+
+
+##DOCKER COMMANDS##
+docker login
+docker build -t miridk/platformservice .
+docker push miridk/platformservice
+Kubectl rollout restart deployment platforms-depl 
