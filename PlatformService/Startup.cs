@@ -37,17 +37,16 @@ namespace PlatformService
                 Console.WriteLine("--> Using MSSQL Db");
                 services.AddDbContext<AppDbContext>(opt =>
                     opt.UseSqlServer(Configuration.GetConnectionString("PlatformsConn")));
-        }
+            }
             else
             {
                 Console.WriteLine("--> Running in Development mode");
                 Console.WriteLine("--> Using InMem Db");
                 services.AddDbContext<AppDbContext>(opt =>
                 opt.UseInMemoryDatabase("InMem"));
-
             }
 
-    services.AddScoped<IPlatformRepo, PlatformRepo>();
+            services.AddScoped<IPlatformRepo, PlatformRepo>();
             services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
