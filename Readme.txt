@@ -1,4 +1,4 @@
-Video stoped at: 5:33:01
+Video stoped at: 5:58
 
 Setup domain on localhost
 C:\Windows\System32\drivers\etc
