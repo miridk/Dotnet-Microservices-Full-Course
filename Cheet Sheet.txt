@@ -16,3 +16,7 @@ docker login
 docker build -t miridk/platformservice .
 docker push miridk/platformservice
 Kubectl rollout restart deployment platforms-depl 
+
+Nuget Packages
+
+nuget restore projectname.csproj
